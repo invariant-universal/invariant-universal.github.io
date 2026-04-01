@@ -13,8 +13,24 @@
         .logo span { color: var(--accent-gold); }
         .mission-statement { font-family: 'Helvetica Neue', Arial, sans-serif; font-weight: 300; line-height: 1.8; color: var(--text-secondary); max-width: 650px; margin: 0 auto 50px auto; font-size: 1.1rem; }
         h1.primary-headline { color: var(--text-primary); font-size: 1.6rem; letter-spacing: 0.1rem; margin-top: 0; margin-bottom: 10px; font-weight: 400; }
-        .center-graphic { width: 150px; height: 150px; border: 1px solid var(--accent-gold); margin: 0 auto 50px auto; clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); display: flex; justify-content: center; align-items: center; box-shadow: 0 0 20px rgba(196,161,97,0.1); position: relative; }
-        .center-graphic::after { content: ''; width: 60%; height: 60%; border: 1px solid var(--accent-gold); clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); opacity: 0.5; }
+        
+        /* THE FIXED GRAPHIC HOLDER (NOW CALLING THE IMAGE) */
+        .center-graphic { 
+            width: 180px; /* Adjusted size slightly for better framing of the safe */
+            height: 180px; 
+            margin: 0 auto 50px auto; 
+            /* THE SPECIFIC FIX: Replace the old CSS effects with the image asset */
+            background-image: url('dodeca-shield.png'); /* Assumes you named the safe image this */
+            background-size: contain; 
+            background-repeat: no-repeat; 
+            background-position: center;
+            /* Removed the old box-shadow, clip-path, and border */
+            position: relative; 
+        }
+        
+        /* The CSS ::after placeholder is also removed or disabled */
+        .center-graphic::after { content: none; }
+
         .teaser-section { border: 1px solid rgba(196,161,97,0.2); background: rgba(196,161,97,0.02); padding: 40px; max-width: 700px; margin: 0 auto 60px auto; font-family: 'Helvetica Neue', Arial, sans-serif; box-shadow: 0 0 10px rgba(0,0,0,0.2); }
         .secure-notice { color: var(--accent-gold); text-transform: uppercase; letter-spacing: 0.15rem; font-size: 0.8rem; margin-bottom: 15px; }
         .teaser-msg { color: var(--text-secondary); line-height: 1.6; font-size: 1.1rem; margin-bottom: 30px; font-weight: 300; font-style: italic; }
@@ -32,7 +48,9 @@
         <div class="header">
             <h2 class="logo">Invariant <span>Universal</span></h2>
         </div>
+        
         <div class="center-graphic"></div>
+        
         <h1 class="primary-headline">Intellectual Property Stewardship</h1>
         <div class="mission-statement">
             Invariant Universal LLC is a specialized portfolio house dedicated to the preservation, development, and terminal transfer of high-value intangible assets. We operate as the exclusive administrative clearinghouse for proprietary technological and mathematical frameworks.
@@ -43,7 +61,7 @@
                 For more information about Invariant Universal or our revolutionary technology, **Dodeca**, that will premier to the world soon, please submit your address below.
             </p>
             <div class="email-form">
-                <input type="email" id="userEmail" class="email-input" placeholder="Your Institutional Email Address" required>
+                <input type="email" id="userEmail" class="email-input" placeholder="Your Email Address" required>
                 <button type="button" class="submit-btn" onclick="submitRequest()">Request Information</button>
             </div>
         </div>
