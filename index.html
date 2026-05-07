@@ -101,6 +101,32 @@
             margin-bottom: 16px;
         }
 
+        .video-frame {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            border: 1px solid rgba(196,161,97,0.22);
+            background: #000000;
+            box-shadow: 0 0 28px rgba(196,161,97,0.06);
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .video-frame iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+            background: #000000;
+        }
+
+        .video-link {
+            margin-top: 14px;
+            font-size: 0.85rem;
+        }
+
         .video-link a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -268,9 +294,20 @@
 
         <div class="video-section">
             <div class="video-kicker">Arctelos<sup>™</sup></div>
+
+            <div class="video-frame">
+                <iframe
+                    src="https://app.heygen.com/embeds/2c0a6b3f529f4bfa9430b2a6a18ec735"
+                    title="Arctelos™: The Master Key"
+                    loading="lazy"
+                    allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
             <div class="video-link">
                 <a href="https://app.heygen.com/videos/arctelos-the-master-key-2c0a6b3f529f4bfa9430b2a6a18ec735" target="_blank" rel="noopener noreferrer">
-                    Watch Arctelos™: The Master Key
+                    Open video in a new tab
                 </a>
             </div>
         </div>
