@@ -20,7 +20,7 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-primary);
-            font-family: 'Georgia', serif;
+            font-family: Georgia, serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -49,7 +49,7 @@
             text-transform: uppercase;
             letter-spacing: 0.3rem;
             margin: 0;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: "Times New Roman", Times, serif;
         }
 
         .logo span {
@@ -67,10 +67,6 @@
             position: relative;
         }
 
-        .center-graphic::after {
-            content: none;
-        }
-
         h1.primary-headline {
             color: var(--text-primary);
             font-size: 1.6rem;
@@ -81,7 +77,7 @@
         }
 
         .mission-statement {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             font-weight: 300;
             line-height: 1.8;
             color: var(--text-secondary);
@@ -94,7 +90,7 @@
             max-width: 720px;
             margin: 0 auto 60px auto;
             text-align: center;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
         }
 
         .video-kicker {
@@ -103,28 +99,6 @@
             letter-spacing: 0.18rem;
             font-size: 0.78rem;
             margin-bottom: 16px;
-        }
-
-        .video-frame {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            border: 1px solid rgba(196,161,97,0.22);
-            background: #000000;
-            box-shadow: 0 0 28px rgba(196,161,97,0.06);
-            overflow: hidden;
-        }
-
-        .video-frame iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .video-link {
-            margin-top: 14px;
-            font-size: 0.85rem;
         }
 
         .video-link a {
@@ -143,7 +117,7 @@
             padding: 40px;
             max-width: 700px;
             margin: 0 auto 60px auto;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             box-shadow: 0 0 10px rgba(0,0,0,0.2);
         }
 
@@ -164,10 +138,6 @@
             font-style: italic;
         }
 
-        .teaser-msg strong {
-            color: var(--accent-gold);
-        }
-
         .email-form {
             display: flex;
             gap: 10px;
@@ -183,5 +153,154 @@
             border: 1px solid var(--input-border);
             background: var(--input-bg);
             color: var(--input-text);
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            font-size: 
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+        }
+
+        .submit-btn {
+            padding: 12px 25px;
+            border: none;
+            background: var(--btn-bg);
+            color: var(--btn-text);
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--btn-text);
+            color: var(--btn-bg);
+            border: 1px solid var(--btn-bg);
+        }
+
+        sup {
+            font-size: 0.62em;
+            vertical-align: super;
+            line-height: 0;
+        }
+
+        .footer {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-size: 0.8rem;
+            color: #404859;
+            padding-top: 20px;
+            border-top: 1px solid rgba(196,161,97,0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .footer a {
+            color: #6f7788;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 700px) {
+            .wrapper {
+                padding: 28px 18px;
+            }
+
+            .logo {
+                font-size: 1.65rem;
+                letter-spacing: 0.18rem;
+            }
+
+            .center-graphic {
+                width: 150px;
+                height: 150px;
+                margin-bottom: 40px;
+            }
+
+            h1.primary-headline {
+                font-size: 1.35rem;
+            }
+
+            .mission-statement {
+                font-size: 1rem;
+                margin-bottom: 42px;
+            }
+
+            .video-section {
+                margin-bottom: 48px;
+            }
+
+            .teaser-section {
+                padding: 30px 22px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-input,
+            .submit-btn {
+                width: 100%;
+                box-sizing: border-box;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <h2 class="logo">Invariant <span>Universal</span></h2>
+        </div>
+
+        <div class="center-graphic"></div>
+
+        <h1 class="primary-headline">Next-Level Intellectual Property</h1>
+
+        <div class="mission-statement">
+            Invariant Universal Company Limited is a specialized portfolio house dedicated to the management, development, and leveraging of high-value intangible assets. We operate as the exclusive administrative clearinghouse for proprietary systematic, procedural, technological and cross-disciplinary frameworks. We are the exclusive representative of the Arctelos <sup>™</sup> technology.
+        </div>
+
+        <div class="video-section">
+            <div class="video-kicker">Arctelos<sup>™</sup></div>
+            <div class="video-link">
+                <a href="https://app.heygen.com/videos/arctelos-the-master-key-2c0a6b3f529f4bfa9430b2a6a18ec735" target="_blank" rel="noopener noreferrer">
+                    Watch Arctelos™: The Master Key
+                </a>
+            </div>
+        </div>
+
+        <div class="teaser-section">
+            <div class="secure-notice">&#128276; Announcement Notice</div>
+
+            <p class="teaser-msg">
+                For more information about the Arctelos<sup>™</sup> technology or about Invariant Universal Company, please submit your email address below.
+            </p>
+
+            <form class="email-form" action="https://formspree.io/f/xnjwbjlb" method="POST">
+                <input
+                    type="email"
+                    name="email"
+                    class="email-input"
+                    placeholder="Your Email Address"
+                    required
+                >
+                <button type="submit" class="submit-btn">Request Information</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <a href="mailto:contact@invariant-universal.com">CONTACT@INVARIANT-UNIVERSAL.COM</a>
+        &nbsp; | &nbsp;
+        <a href="tel:+14126797095">+1 (412) 679-7095</a>
+        &nbsp; | &nbsp;
+        &copy; INVARIANT UNIVERSAL COMPANY LIMITED. REGISTERED IN THE COMMONWEALTH OF PENNSYLVANIA.
+    </div>
+</body>
+</html>
